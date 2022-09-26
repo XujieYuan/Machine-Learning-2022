@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Supervised Machine Learning: Regression and Classification}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Week 1 linear Regression with One Variable}{2}{}%
+\contentsline {subsubsection}{\numberline {1.1.1}Learning Objectives}{2}{}%
+\contentsline {subsubsection}{\numberline {1.1.2}Gradient Descent}{3}{}%
+\contentsline {subsubsection}{\numberline {1.1.3}Gradient descent for linear regression}{3}{}%
+\contentsline {subsubsection}{\numberline {1.1.4}Lab notes}{3}{}%
+\contentsline {paragraph}{}{3}{}%
+\contentsline {subsection}{\numberline {1.2}Week 2 Regression with multiple input variables}{4}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Learning Objectives}{4}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Vectorization}{4}{}%
+\contentsline {subsubsection}{\numberline {1.2.3}Multiple Linear Regression}{4}{}%
+\contentsline {section}{\numberline {2}More in Mathematics}{5}{}%
+\contentsline {section}{\numberline {3}Equations}{5}{}%

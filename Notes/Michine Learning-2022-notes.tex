@@ -1,0 +1,156 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\begin{document}
+    \tableofcontents
+    \newpage
+    \section{Supervised Machine Learning: Regression and Classification}
+    \subsection{Week 1 linear Regression with One Variable}
+	\subsubsection{Learning Objectives}
+    \begin{itemize}
+	    \item Define machine learning
+        \item Define supervised learning
+        \item Define unsupervised learning
+        \item Write and run Python code in Jupyter Notebooks
+        \item Define a regression model
+        \item Implement and visualize a cost function
+        \item Implement gradient descent
+        \item Optimize a regression model using gradient descent
+    \end{itemize}  
+    \subsubsection*{Some notations}
+    \begin{itemize}
+	    \item In the training set, there are features ($x$) and targets ($y$)
+        \item $x$ is the input variable (feature)
+        \item $y$ is the output variable (target)
+        \item $m = \text{number of training examples}$
+        \item $(x,y) = \text{single training example}$
+        \item \textcolor{red}{$(x^{(i)},y^{(i)}) = i^{th}\text{ training example } (1^{st},2^{nd},3^{rd}...)$ }
+        \item \textcolor{red}{$\hat{y}$ means prediction(estimated y)}
+        \item $f$ is the function (model)(hypothesis)
+        \item $f_{w,b}(x)=wx+b$
+        \item Parameters: $w,b$
+        \item \textcolor{red}{Squared error cost function: $J(w,b)=\frac{1}{2m}\sum_{i=1}^{m}(\hat{y}^{(i)}-y^{(i)})^2$}
+        \item Find $w,b$ : $\hat{y}^{(i)}\text{ is close to }y^{(i)}\text{ for all }(x^{(i)},y^{(i)})$
+    \end{itemize} 
+    \[ J(w,b)=\frac{1}{2m}\sum_{i=1}^{m}(f_{w,b}(x^{(i)})-y^{(i)})^2 \]
+    \begin{itemize}
+        \item Goal: $minimizeJ(w,b)$
+    \end{itemize}
+    \subsubsection{Gradient Descent}
+    repeat until convergence\{
+    \[ w=w-\alpha\frac{\partial}{\partial w}J(w,b) \]
+    \[ b=b-\alpha\frac{\partial}{\partial b}J(w,b) \]
+    \} \newline
+    Simultaneously update w and b \newline
+    $\alpha\text{ is the learning rate(usually between 0 and 1, maybe 0.01)}$ \newline
+    $\frac{\partial}{\partial w}J(w,b)\text{ and }\frac{\partial}{\partial b}J(w,b)\text{ are derivative terms}$ \newline
+    Near a local minimum,
+    \begin{itemize}
+        \item Derivative becomes smaller
+        \item Update steps become smaller
+    \end{itemize}
+    \subsubsection{Gradient descent for linear regression}
+    \[\frac{\partial}{\partial w}J(w,b) = \frac{1}{m}\sum_{i=1}^{m}(f_{w,b}(x)^{(i)}-y^{(i)})x^{(i)}\]
+    \[\frac{\partial}{\partial b}J(w,b) = \frac{1}{m}\sum_{i=1}^{m}(f_{w,b}(x)^{(i)}-y^{(i)})\]
+    repeat until convergence\{
+    \[w = w - \alpha\frac{1}{m}\sum_{i=1}^{m}(f_{w,b}(x)^{(i)}-y^{(i)})x^{(i)}\]
+    \[b = b - \alpha\frac{1}{m}\sum_{i=1}^{m}(f_{w,b}(x)^{(i)}-y^{(i)})\]
+    \} 
+    \subsubsection{Lab notes}
+    \paragraph{}
+    Deep copy is a process in which the copying process occurs recursively. It means first constructing a new collection object and then recursively populating it with copies of the child objects found in the original. In case of deep copy, a copy of object is copied in other object. It means that any changes made to a copy of object do not reflect in the original object. In python, this is implemented using “deepcopy()” function. \\
+    0.3e : example: 1.949e+02 (Three decimal places are reserved before e) \\
+    8.4f : example: 199.9929 (Including the decimal point, there are eight decimal places, and four decimal places are reserved after the decimal point) 
+    \subsection{Week 2 Regression with multiple input variables}
+    \subsubsection{Learning Objectives}
+    \begin{itemize}
+        \item Use vectorization to implement multiple linear regression
+        \item Use feature scaling, feature engineering, and polynomial regression to improve model training
+        \item Implement linear regression in code
+    \end{itemize}
+    \subsubsection*{Some notations}
+    \begin{itemize}
+	    \item $x_j = j^{th}$ feature
+        \item $n = $ number of features
+        \item $\vec{x}^{(i)}=$ features of $i^{th}$ training example
+        \item $\vec{x}^{(i)}_j=$ value of feature $j$ in $i^{th}$ training example
+        \item $f(w,b)=w_1x_1+w_2x_2+...+w_nx_n+b$ \\ 
+        $\vec{x}=[x_1,x_2,x_3,...,x_n]$ \\
+        $\vec{w}=[w_1,w_2,w_3,...,w_n]$ \\
+        $b$ is a number \\
+        $\vec{w}$ and $b$ are parameters of the model
+        \item $$f_{\vec{w},b}(\vec{x})=\vec{w}\cdot\vec{x}+b$$
+    \end{itemize} 
+    \subsubsection{Vectorization}
+     ``for j in range (0,n)" means from 0 to n-1,not include n itself, also can use ``range(n)"
+    \subsubsection{Multiple Linear Regression}
+
+
+
+
+
+    \newpage
+    $ 2^{2} + 2^{2} = 8$ and $ 2 \times 2 = 4$
+
+    \[ \cos^2 \theta + \sin^2 \theta = 1\]
+    
+    The union of two sets A and B is denoted as 
+    $ A \cup B = \{ x \in A \ \text{or} \ x \in B \} $
+    
+    We are learning fractions $ \frac{a}{\frac{b}{c}} \times \frac{\frac{d}{e}}{f} \geq 1$ which is good.
+
+    \[ \frac{a}{\frac{b}{c}} \times \frac{\frac{d}{e}}{f} \geq 1\]
+
+    \[ \Bigg\{ \bigg(\frac{a}{b}\bigg) + \bigg(\frac{c}{d}\bigg)\Bigg\} \]
+
+    \[ \sum_{i=a}^{b} g(i) = 0, \text{for } b < a \]
+
+    \[ \sum_{i=1}^{n} i = \frac{n(n+1)}{2} \]
+
+    \section{More in Mathematics}
+
+    $\int_{2}^{4}$
+
+    $lim_{2 \to 4}$
+
+    \[ \int_{0}^{\infty} f(x)dx \]
+
+    \[ \lim_{x \to c} f(x)=L \]
+
+    $
+    \begin{bmatrix}
+        1 & 2 \\
+        3 & 4 \\
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+        5 & 6 \\
+        7 & 8 \\
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        6 & 8 \\
+        10 & 12 \\
+    \end{bmatrix}
+    $
+
+    \section{Equations}
+    \begin{equation}
+        3x + 5y = 2
+    \end{equation}
+    
+    \begin{equation}
+        5x + 8y = 3
+    \end{equation}
+
+    \begin{equation}
+        x^{2} - y^{2} = (x+y)(x-y)
+    \end{equation}
+
+    \begin{align}
+        3x - 6 &= 9 \\
+        3x &= 9 + 6 \nonumber \\
+        x &= \frac{9+6}{3} \nonumber \\
+        x &= 5 \nonumber
+    \end{align}
+\end{document}
